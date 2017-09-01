@@ -1,0 +1,17 @@
+version: "2"
+services:
+  mongo:
+    image: mongo
+  api:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/opt/app/
+      - /opt/app/node_modules
+    links:
+      - mongo
+    working_dir: /opt/app/
+    tty: true
+    stdin_open: true
+    command: npm start

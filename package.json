@@ -1,0 +1,38 @@
+{
+  "name": "api-express-mongoose-jwt-example",
+  "version": "0.0.1",
+  "description": "API example",
+  "main": "app.js",
+  "private": true,
+  "scripts": {
+    "start": "npm run seed && nodemon server.js",
+    "seed": "node_modules/mongoose-data-seed/dist/bin/index.js run users -d"
+  },
+  "keywords": [
+    "Vulnerable API"
+  ],
+  "author": "Nicolas Baglivo",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.3",
+    "express": "^4.15.3",
+    "express-jwt": "^5.3.0",
+    "jsonwebtoken": "^7.4.1",
+    "lodash": "^4.17.4",
+    "md5": "^2.2.1",
+    "mongoose": "^4.10.4",
+    "mongoose-data-seed": "^1.0.1",
+    "mongoose-unique-validator": "^1.0.5",
+    "mongoose-validators": "^0.1.0",
+    "morgan": "^1.8.2",
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.2.1",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
